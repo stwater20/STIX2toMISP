@@ -1,0 +1,74 @@
+{
+  "description": "DLRA",
+  "meta-category": "sectoolstw",
+  "name": "identity",
+  "required": [
+    "id"
+  ],
+  "uuid": "86653409-af01-4573-94f9-010ca1490dc9",
+  "version": 1,
+  "attributes": {
+    "id": {
+      "description": "id",
+      "disable_correlation": true,
+      "misp-attribute": "text",
+      "ui-priority": 0
+    },
+    "identity_class": {
+      "description": "identity_class",
+      "disable_correlation": false,
+      "misp-attribute": "text",
+      "ui-priority": 0
+    },
+    "spec_version": {
+      "description": "spec_version",
+      "disable_correlation": false,
+      "misp-attribute": "text",
+      "ui-priority": 0
+    },
+    "name": {
+      "description": "name",
+      "disable_correlation": false,
+      "misp-attribute": "text",
+      "ui-priority": 0
+    },
+    "description": {
+      "description": "description",
+      "disable_correlation": false,
+      "misp-attribute": "text",
+      "ui-priority": 0
+    },
+    "created": {
+      "description": "created",
+      "disable_correlation": false,
+      "misp-attribute": "datetime",
+      "ui-priority": 0
+    },
+    "modified": {
+      "description": "modified",
+      "disable_correlation": false,
+      "misp-attribute": "datetime",
+      "ui-priority": 0
+    },
+    "roles": {
+      "description": "roles",
+      "disable_correlation": false,
+      "misp-attribute": "text",
+      "ui-priority": 0,
+      "multiple": true
+    },
+    "sectors": {
+      "description": "sectors",
+      "disable_correlation": false,
+      "misp-attribute": "text",
+      "ui-priority": 0,
+      "multiple": true
+    },
+    "contact_information": {
+      "description": "contact_information",
+      "disable_correlation": false,
+      "misp-attribute": "text",
+      "ui-priority": 0
+    }
+  }
+}

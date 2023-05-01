@@ -1,0 +1,191 @@
+{
+	"type": "bundle",
+	"id": "bundle--cdc14b5e-52cc-4cfa-b0dc-1c35a2aae891",
+	"spec_version": "2.1",
+	"objects": [
+		{
+			"id": "extension-definition--d83fce45-ef58-4c6c-a3f4-1fbc32e98c6e",
+			"type": "extension-definition",
+			"spec_version": "2.1",
+			"name": "Extension 1",
+			"description": "This schema adds a property to a STIX object",
+			"created": "2021-09-14T08:56:34.935656Z",
+			"modified": "2021-09-14T08:56:34.935656Z",
+			"created_by_ref": "identity--0290e9ce-cbd1-4c4c-b23f-9585ba965918",
+			"schema": "adds one property to a STIX object",
+			"version": "1",
+			"extension_types": [
+				"property-extension"
+			]
+		},
+		{
+			"type": "report",
+			"spec_version": "2.1",
+			"id": "report--9c82a63e-c4fa-4e89-949c-6cad9e430d70",
+			"created_by_ref": "identity--0290e9ce-cbd1-4c4c-b23f-9585ba965918",
+			"created": "2021-09-14T08:56:34.935656Z",
+			"modified": "2021-09-14T08:56:34.935656Z",
+			"report_types": [
+				"200"
+			],
+			"labels": [
+				"NISAC-200-20210914-00001"
+			],
+			"name": "Google Chrome與Microsoft Edge瀏覽器存在安全漏洞(CVE-2021-30598、30599)，允許攻擊者遠端執行任意程式碼，請儘速確認並進行更新",
+			"description": "研究人員發現Google Chrome與Microsoft Edge(基於Chromium)瀏覽器存在安全漏洞(CVE-2021-30598、30599)，攻擊者可藉由誘騙受害者瀏覽特製網頁，利用此漏洞進而遠端執行任意程式碼。",
+			"published": "2021-08-18T08:58:38.955094Z",
+			"extensions": {
+				"extension-definition--d83fce45-ef58-4c6c-a3f4-1fbc32e98c6e": {
+					"extension_type": "property-extension",
+					"x_severity": 3
+				}
+			},
+			"object_refs": [
+				"identity--0290e9ce-cbd1-4c4c-b23f-9585ba965918",
+				"course-of-action--70d64c77-e6d7-427d-86d1-5643fb8e1feb",
+				"vulnerability--0c7b5b88-8ff7-4a4d-aa9d-feb398cd0061",
+				"vulnerability--19ca760f-4936-4653-8433-18ebb4d95a8b",
+				"relationship--019d336e-8954-40e1-ae7c-d30ff0300b39",
+				"relationship--ed1da198-4d84-4f69-8cc3-70c4748fdb7d",
+				"relationship--ed1da198-4d84-4f69-8cc3-70c5555f2222",
+				"relationship--ed1da198-4d84-4f69-8cc3-70c5555f2322"
+			],
+			"object_marking_refs": [
+				"marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+			],
+			"external_references": [
+				{
+					"source_name": "CVE",
+					"url": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-30598"
+				},
+				{
+					"source_name": "CVE",
+					"url": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-30599"
+				}
+			]
+		},
+		{
+			"type": "marking-definition",
+			"spec_version": "2.1",
+			"id": "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9",
+			"created": "2017-01-20T00:00:00.000Z",
+			"definition_type": "tlp",
+			"name": "TLP:WHITE",
+			"definition": {
+				"tlp": "white"
+			}
+		},
+		{
+			"type": "identity",
+			"spec_version": "2.1",
+			"id": "identity--0290e9ce-cbd1-4c4c-b23f-9585ba965918",
+			"created": "2021-09-14T08:56:34.897484Z",
+			"modified": "2021-09-14T08:56:34.897484Z",
+			"name": "NCCST",
+			"description": "National Center for Cyber Security Technology",
+			"roles": [
+				"National-ISAC"
+			],
+			"identity_class": "organization",
+			"sectors": [
+				"government-national"
+			],
+			"contact_information": "['EMAIL:nisac@nccst.nat.gov.tw', 'Telephone:(02)27391000']"
+		},
+		{
+			"type": "vulnerability",
+			"spec_version": "2.1",
+			"id": "vulnerability--0c7b5b88-8ff7-4a4d-aa9d-feb398cd0061",
+			"created": "2021-09-14T08:56:34.934895Z",
+			"modified": "2021-09-14T08:56:34.934895Z",
+			"name": "CVE-2021-30598",
+			"description": "Type confusion in V8 in Google Chrome prior to 92.0.4515.159 allowed a remote attacker to execute arbitrary code inside a sandbox via a crafted HTML page.",
+			"external_references": [
+				{
+					"source_name": "cve",
+					"external_id": "CVE-2021-30598"
+				}
+			]
+		},
+		{
+			"type": "vulnerability",
+			"spec_version": "2.1",
+			"id": "vulnerability--19ca760f-4936-4653-8433-18ebb4d95a8b",
+			"created": "2021-09-14T08:56:34.934895Z",
+			"modified": "2021-09-14T08:56:34.934895Z",
+			"name": "CVE-2021-30599",
+			"description": "Type confusion in V8 in Google Chrome prior to 92.0.4515.159 allowed a remote attacker to execute arbitrary code inside a sandbox via a crafted HTML page.",
+			"external_references": [
+				{
+					"source_name": "cve",
+					"external_id": "CVE-2021-30599"
+				}
+			]
+		},
+		{
+			"type": "software",
+			"spec_version": "2.1",
+			"id": "software--a1827f6d-ca53-5605-9e93-4316cd22a00a",
+			"name": "Google Chrome pior to 92.0.4515.159",
+			"version": "pior to 92.0.4515.159",
+			"vendor": "Google"
+		},
+		{
+			"type": "software",
+			"spec_version": "2.1",
+			"id": "software--a1727f6d-ca53-5605-9e93-4316cd22a00a",
+			"name": "Microsoft Edge pior to 92.0.902.78",
+			"version": "pior to 92.0.902.78",
+			"vendor": "Microsoft"
+		},
+		{
+			"type": "course-of-action",
+			"spec_version": "2.1",
+			"id": "course-of-action--70d64c77-e6d7-427d-86d1-5643fb8e1feb",
+			"created": "2021-09-14T08:56:34.934895Z",
+			"modified": "2021-09-14T08:56:34.934895Z",
+			"name": "建議措施",
+			"description": "*請更新Google Chrome瀏覽器至92.0.4515.159以後版本，更新方式如下：1.開啟瀏覽器，於網址列輸入chrome://settings/help，瀏覽器將執行版本檢查與自動更新2.點擊「重新啟動」完成更新*請更新Microsoft Edge瀏覽器至92.0.902.78以後版本，更新方式如下：1.開啟瀏覽器，於網址列輸入edge://settings/help，瀏覽器將執行版本檢查與自動更新2.點擊「重新啟動」完成更新"
+		},
+		{
+			"type": "relationship",
+			"spec_version": "2.1",
+			"id": "relationship--019d336e-8954-40e1-ae7c-d30ff0300b39",
+			"created": "2021-09-14T08:56:34.934895Z",
+			"modified": "2021-09-14T08:56:34.934895Z",
+			"relationship_type": "related-to",
+			"source_ref": "vulnerability--0c7b5b88-8ff7-4a4d-aa9d-feb398cd0061",
+			"target_ref": "software--a1827f6d-ca53-5605-9e93-4316cd22a00a"
+		},
+		{
+			"type": "relationship",
+			"spec_version": "2.1",
+			"id": "relationship--ed1da198-4d84-4f69-8cc3-70c4748fdb7d",
+			"created": "2021-09-14T08:56:34.934895Z",
+			"modified": "2021-09-14T08:56:34.934895Z",
+			"relationship_type": "has",
+			"source_ref": "software--a1727f6d-ca53-5605-9e93-4316cd22a00a",
+			"target_ref": "vulnerability--0c7b5b88-8ff7-4a4d-aa9d-feb398cd0061"
+		},
+		{
+			"type": "relationship",
+			"spec_version": "2.1",
+			"id": "relationship--ed1da198-4d84-4f69-8cc3-70c5555f2222",
+			"created": "2021-09-14T08:56:34.934895Z",
+			"modified": "2021-09-14T08:56:34.934895Z",
+			"relationship_type": "has",
+			"source_ref": "software--a1827f6d-ca53-5605-9e93-4316cd22a00a",
+			"target_ref": "vulnerability--19ca760f-4936-4653-8433-18ebb4d95a8b"
+		},
+		{
+			"type": "relationship",
+			"spec_version": "2.1",
+			"id": "relationship--ed1da198-4d84-4f69-8cc3-70c5555f2322",
+			"created": "2021-09-14T08:56:34.934895Z",
+			"modified": "2021-09-14T08:56:34.934895Z",
+			"relationship_type": "related-to",
+			"source_ref": "vulnerability--19ca760f-4936-4653-8433-18ebb4d95a8b",
+			"target_ref": "software--a1727f6d-ca53-5605-9e93-4316cd22a00a"
+		}
+	]
+}

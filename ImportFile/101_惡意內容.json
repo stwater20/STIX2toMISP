@@ -1,0 +1,113 @@
+{
+    "type": "bundle",
+    "id": "bundle--cdc14b5e-52cc-4cfa-b0dc-1c35a2aae891",
+    "spec_version": "2.1",
+    "objects": [
+        {
+			"id": "extension-definition--d83fce45-ef58-4c6c-a3f4-1fbc32e98c6e",
+			"type": "extension-definition",
+			"spec_version": "2.1",
+			"name": "Extension 1",
+			"description": "This schema adds a property to a STIX object",
+			"created": "2021-09-14T08:56:34.935656Z",
+			"modified": "2021-09-14T08:56:34.935656Z",
+			"created_by_ref": "identity--0290e9ce-cbd1-4c4c-b23f-9585ba965918",
+			"schema": "adds one property to a STIX object",
+			"version": "1",
+			"extension_types": [ "property-extension" ]
+		},
+
+		{
+            "type": "grouping",
+            "id": "grouping--9c82a63e-c4fa-4e89-949c-6cad9e430d70",
+            "created_by_ref": "identity--0290e9ce-cbd1-4c4c-b23f-9585ba965918",
+			"spec_version": "2.1",
+            "created": "2021-09-14T08:56:34.935656Z",
+            "modified": "2021-09-14T08:56:34.935656Z",
+			"labels":["NISAC-101-20210914-00001"],
+			"context": "101",            
+			"name": "X-ISAC 10.10.10.10 用戶所屬資訊設備發送垃圾郵件通知",
+            "description": "技服中心接獲外部情資，發現 X-ISAC  10.10.10.10用戶資訊設備疑似對外產生發送垃圾郵件行為，疑似已遭入侵或遭遇設定等問題，建議盡速確認並解決。",
+			"extensions": {
+				"extension-definition--d83fce45-ef58-4c6c-a3f4-1fbc32e98c6e" : {
+				"extension_type": "property-extension",
+				"x_severity": 2
+			}},
+            "object_refs": [
+                "identity--0290e9ce-cbd1-4c4c-b23f-9585ba965918",
+				"course-of-action--70d64c77-e6d7-427d-86d1-5643fb8e1feb",
+				"infrastructure--38c47d93-d984-4fd9-b87b-d69d0841628d",
+				"relationship--b82b2819-3b86-4bd5-afb3-fa36cfbc3f18",
+				"ipv4-addr--ff26c055-6336-5bc5-b98d-13d6226742dd"
+				
+            ],
+            "object_marking_refs": [
+                "marking-definition--f88d31f6-486f-44da-b317-01333bde0b82"
+            ]
+        },
+   {
+			"type": "marking-definition",
+			"spec_version": "2.1",
+			"id": "marking-definition--f88d31f6-486f-44da-b317-01333bde0b82",
+			"created": "2017-01-20T00:00:00.000Z",
+			"definition_type": "tlp",
+			"name": "TLP:AMBER",
+			"definition": {
+				"tlp": "amber"
+		}
+		},
+
+        {
+            "type": "identity",
+			"spec_version": "2.1",
+            "id": "identity--0290e9ce-cbd1-4c4c-b23f-9585ba965918",
+            "created": "2021-09-14T08:56:34.897484Z",
+            "modified": "2021-09-14T08:56:34.897484Z",
+            "name": "NCCST",
+			"description":"National Center for Cyber Security Technology",
+			"roles":["National-ISAC"],
+            "identity_class": "organization",
+            "sectors": [
+                 "government-national"
+            ],
+            "contact_information": "['EMAIL:nisac@nccst.nat.gov.tw', 'Telephone:(02)27391000']"
+        },
+		{
+            "type": "course-of-action",
+			"spec_version": "2.1",
+            "id": "course-of-action--70d64c77-e6d7-427d-86d1-5643fb8e1feb",
+            "created": "2021-09-14T08:56:34.934895Z",
+            "modified": "2021-09-14T08:56:34.934895Z",
+            "name": "建議措施",
+		    "description": "請確認用戶是否有以下狀況：1.病毒郵件、蠕蟲郵件，利用作業系統或者應用系統的漏洞，大量轉發含帶病毒的郵件，建議更新伺服器與相關應用系統至最新版本。2.郵件伺服器Openrelay漏洞被人利用進行垃圾郵件的發送，建議關閉郵件伺服器Openrelay。3.正常用戶進行垃圾郵件的發送。"
+        },
+		{
+		  "type":"infrastructure",
+		  "spec_version": "2.1",
+		  "id":"infrastructure--38c47d93-d984-4fd9-b87b-d69d0841628d",
+		  "created":"2021-09-14T08:56:34.934895Z",
+		  "modified":"2021-09-14T08:56:34.934895Z",
+		  "name":"Spam",
+		  "infrastructure_types": ["unknown"]
+		},
+		{
+		  "type": "relationship",
+		  "spec_version": "2.1",
+		  "id": "relationship--b82b2819-3b86-4bd5-afb3-fa36cfbc3f18",
+		  "created": "2021-09-14T08:56:34.934895Z",
+		  "modified": "2021-09-14T08:56:34.934895Z",
+		  "relationship_type": "consists-of",
+		  "source_ref": "infrastructure--38c47d93-d984-4fd9-b87b-d69d0841628d",
+		  "target_ref": "ipv4-addr--84445275-e371-444b-baea-ac7d07a180fd"
+		},
+
+		{
+		  "type": "ipv4-addr",
+		  "spec_version": "2.1",
+		  "id": "ipv4-addr--84445275-e371-444b-baea-ac7d07a180fd",
+		  "value": "10.10.10.10"
+		}
+
+
+    ]
+}

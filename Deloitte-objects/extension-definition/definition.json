@@ -1,0 +1,73 @@
+{
+  "description": "DLRA",
+  "meta-category": "sectoolstw",
+  "name": "extension-definition",
+  "required": [
+    "id"
+  ],
+  "uuid": "9cdc388f-c744-489d-a895-58818f540bac",
+  "version": 4,
+  "attributes": {
+    "id": {
+      "description": "id",
+      "disable_correlation": true,
+      "misp-attribute": "text",
+      "ui-priority": 0
+    },
+    "spec_version": {
+      "description": "spec_version",
+      "disable_correlation": false,
+      "misp-attribute": "text",
+      "ui-priority": 0
+    },
+    "name": {
+      "description": "name",
+      "disable_correlation": false,
+      "misp-attribute": "text",
+      "ui-priority": 0
+    },
+    "description": {
+      "description": "description",
+      "disable_correlation": false,
+      "misp-attribute": "text",
+      "ui-priority": 0
+    },
+    "created": {
+      "description": "created",
+      "disable_correlation": false,
+      "misp-attribute": "datetime",
+      "ui-priority": 0
+    },
+    "modified": {
+      "description": "modified",
+      "disable_correlation": false,
+      "misp-attribute": "datetime",
+      "ui-priority": 0
+    },
+    "created_by_ref": {
+      "description": "created_bt_ref",
+      "disable_correlation": false,
+      "misp-attribute": "text",
+      "ui-priority": 0
+    },
+    "schema": {
+      "description": "scheme",
+      "disable_correlation": false,
+      "misp-attribute": "text",
+      "ui-priority": 0
+    },
+    "version": {
+      "description": "version",
+      "disable_correlation": false,
+      "misp-attribute": "text",
+      "ui-priority": 0
+    },
+    "extension_types": {
+      "description": "extension",
+      "disable_correlation": false,
+      "misp-attribute": "text",
+      "ui-priority": 0,
+      "multiple": true
+    }
+  }
+}

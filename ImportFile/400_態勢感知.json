@@ -1,0 +1,228 @@
+{
+    "type": "bundle",
+    "id": "bundle--cdc14b5e-52cc-4cfa-b0dc-1c35a2aae891",
+    "spec_version": "2.1",
+    "objects": [
+        {
+			"id": "extension-definition--d83fce45-ef58-4c6c-a3f4-1fbc32e98c6e",
+			"type": "extension-definition",
+			"spec_version": "2.1",
+			"name": "Extension 1",
+			"description": "This schema adds a property to a STIX object",
+			"created": "2021-09-14T08:56:34.935656Z",
+			"modified": "2021-09-14T08:56:34.935656Z",
+			"created_by_ref": "identity--0290e9ce-cbd1-4c4c-b23f-9585ba965918",
+			"schema": "adds one property to a STIX object",
+			"version": "1",
+			"extension_types": [ "property-extension" ]
+		},
+
+		{
+            "type": "report",
+            "id": "report--9c82a63e-c4fa-4e89-949c-6cad9e430d70",
+			"spec_version": "2.1",
+            "created_by_ref": "identity--0290e9ce-cbd1-4c4c-b23f-9585ba965918",
+            "created": "2021-09-14T08:56:34.935656Z",
+            "modified": "2021-09-14T08:56:34.935656Z",
+			"report_types": ["400"],
+			"labels":["NISAC-400-20210914-00001"],
+            "name": "北韓駭客組織HIDDEN COBRA所利用之惡意程式BLINDINGCAN，請各會員注意防範",
+            "description": "美國國土安全部與聯邦調查局近期發布惡意程式分析報告，描述北韓駭客組織HIDDEN COBRA利用之BLINDINGCAN遠端存取後門工具程式。若資訊設備遭受感染會有以下風險：1.個人或單位資料遭竊取。2.個人工作或單位運作被影響而中斷停擺。3.資訊設備資源被利用於對外攻擊。4.單位財務損失。建議除使用防毒軟體檢查資訊設備是否受惡意程式感染，也可透過檢查連線紀錄與惡意程式資訊確認感染與否。",
+            "published": "2021-09-18T08:58:38.955094Z",
+			"extensions": {
+				"extension-definition--d83fce45-ef58-4c6c-a3f4-1fbc32e98c6e" : {
+				"extension_type": "property-extension",
+				"x_severity": 3
+			}},
+            "object_refs": [
+                "identity--0290e9ce-cbd1-4c4c-b23f-9585ba965918",
+				"course-of-action--70d64c77-e6d7-427d-86d1-5643fb8e1feb",
+				"threat-actor--9a8a0d25-7636-429b-a99e-b2a73cd0f11f",
+				"malware--0c7b5b88-8ff7-4a4d-aa9d-feb398cd0061",
+				"relationship--019d336e-8954-40e1-ae7c-d30ff0300b39",
+				"relationship--ed1da198-4d84-4f69-8cc3-70c5555f2222",
+				"relationship--ed1da198-4d84-4f69-8cc3-70c5555f2223",
+				"relationship--864af2ea-46f9-4d23-b3a2-1c2adf81c265",
+				"relationship--864af2ea-46f9-4d23-b3a2-1c2adf81c266"
+				
+            ],
+            "object_marking_refs": [
+                 "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+      {
+			"type": "marking-definition",
+			"spec_version": "2.1",
+			"id": "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9",
+			"created": "2017-01-20T00:00:00.000Z",
+			"definition_type": "tlp",
+			"name": "TLP:WHITE",
+			"definition": {
+			"tlp": "white"
+		}
+		},
+        {
+            "type": "identity",
+            "id": "identity--0290e9ce-cbd1-4c4c-b23f-9585ba965918",
+			"spec_version": "2.1",
+            "created": "2021-09-14T08:56:34.897484Z",
+            "modified": "2021-09-14T08:56:34.897484Z",
+            "name": "NCCST",
+			"description":"National Center for Cyber Security Technology",
+			"roles":["National-ISAC"],
+            "identity_class": "organization",
+            "sectors": [
+                "government-national"
+            ],
+            "contact_information": "['EMAIL:nisac@nccst.nat.gov.tw', 'Telephone:(02)27391000']"
+        },
+		
+		{
+            "type": "threat-actor",
+            "spec_version": "2.1",
+            "id": "threat-actor--9a8a0d25-7636-429b-a99e-b2a73cd0f11f",
+            "created": "2021-09-14T08:56:34.897484Z",
+            "modified": "2021-09-14T08:56:34.897484Z",
+			"name": "HIDDEN COBRA",
+            "description": "A threat group that has been attributed to the North Korean government.",
+			"aliases": ["Lazarus Group", "Guardians of Peace","ZINC","NICKEL ACADEMY"],	
+			"threat_actor_types": [ "nation-state"],					
+			"roles": ["director"],
+			"sophistication": "strategic",			
+			"resource_level": "government",			
+			"primary_motivation": "organizational-gain"		
+        },
+		
+		{
+			"type": "malware",
+			"spec_version": "2.1",
+			"id": "malware--0c7b5b88-8ff7-4a4d-aa9d-feb398cd0061",
+            "created": "2021-09-14T08:56:34.897484Z",
+            "modified": "2021-09-14T08:56:34.897484Z",
+			"name": "BLINDINGCAN",
+			"description": "A remote access Trojan that has been used by the North Korean government since at least early 2020 in cyber operations against defense, engineering, and government organizations in Western Europe and the US",
+			"malware_types": ["remote-access-trojan"],
+			"is_family": false
+		},	
+        {
+            "type": "attack-pattern",
+			"spec_version": "2.1",
+			"created": "2020-03-02T19:05:18.137Z",
+			"modified": "2021-10-18T17:39:12.452Z",
+			"id": "attack-pattern--2e34237d-8574-43f6-aace-ae2915de8597",
+			"name": "Spearphishing Attachment",
+            "description": "Adversaries may send spearphishing emails with a malicious attachment in an attempt to gain access to victim systems. Spearphishing attachment is a specific variant of spearphishing. Spearphishing attachment is different from other forms of spearphishing in that it employs the use of malware attached to an email. All forms of spearphishing are electronically delivered social engineering targeted at a specific individual, company, or industry. In this scenario, adversaries attach a file to the spearphishing email and usually rely upon [User Execution](https://attack.mitre.org/techniques/T1204) to gain execution. Spearphishing may also involve social engineering techniques, such as posing as a trusted source.\n\nThere are many options for the attachment such as Microsoft Office documents, executables, PDFs, or archived files. Upon opening the attachment (and potentially clicking past protections), the adversary's payload exploits a vulnerability or directly executes on the user's system. The text of the spearphishing email usually tries to give a plausible reason why the file should be opened, and may explain how to bypass system protections in order to do so. The email may also contain instructions on how to decrypt an attachment, such as a zip file password, in order to evade email boundary defenses. Adversaries frequently manipulate file extensions and icons in order to make attached executables appear to be document files, or files exploiting one application appear to be a file for a different one. ",
+			"external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "external_id": "T1566.001",
+                    "url": "https://attack.mitre.org/techniques/T1566/001"
+                },
+                {
+                    "external_id": "CAPEC-163",
+                    "source_name": "capec",
+                    "url": "https://capec.mitre.org/data/definitions/163.html"
+                }
+            ],
+			"kill_chain_phases": [
+                {
+                    "kill_chain_name": "mitre-attack",
+                    "phase_name": "initial-access"
+                }
+            ]
+        },
+		{
+          "type": "indicator",
+          "spec_version": "2.1",
+          "id": "indicator--33fe3b22-0201-47cf-85d0-97c02164528d",
+          "created": "2021-09-14T13:07:49.812Z",
+          "modified": "2021-09-14T13:07:49.812Z",
+          "name": "Malicious IP",
+          "description": "Malicious IP found in BLINDINGCAN",
+          "indicator_types": [
+              "malicious-activity"
+          ],
+		  "pattern_type": "stix",
+		  "pattern_version": "2.1",
+		  "valid_from": "2021-09-14T08:58:38.955094Z",
+          "pattern": "[ipv4-addr:value = '192.99.20.39' OR ipv4-addr:value = '10.0.0.1']"
+      },
+		{
+			"type": "indicator",
+			"spec_version": "2.1",
+			"id": "indicator--64907175-5b2a-49d9-a8ce-39625a463a60",
+			"created": "2021-09-14T08:56:34.898631Z",
+			"modified": "2021-09-14T08:56:34.898631Z",
+			"name": "File hash for BLINDINGCAN",
+			"description": "This file hash indicates that a sample of BLINDINGCAN is present.",
+			"indicator_types": [
+				"malicious-activity"
+				],
+			"pattern_type": "stix",
+			"pattern_version": "2.1",
+			"valid_from": "2021-08-18T08:58:38.955094Z",
+			"pattern": "[file:hashes.'SHA-256' = '586d012540ed1244572906e3733a0cb4bba90a320da82f853e5dfac82c5c663e']"
+		},	
+        {
+            "type": "course-of-action",
+			"spec_version": "2.1",
+            "id": "course-of-action--70d64c77-e6d7-427d-86d1-5643fb8e1feb",
+            "created": "2021-09-14T08:56:34.934895Z",
+            "modified": "2021-09-14T08:56:34.934895Z",
+            "name": "建議措施",
+		    "description": "1.部署黑名單於防護設備進行偵測，監控是否有資訊設備已遭入侵/2.各會員可依參考資訊連結，取得詳細惡意程式特徵如雜湊值與偵測規則，用以偵測系統是否存在相關惡意程式，若確認資訊設備已遭入侵，建議立即進行必要處理措施：(1)針對受害電腦進行資安事件應變處理。(2)重新安裝作業系統，並更新作業系統及相關應用軟體。(3)更換系統使用者密碼。3.日常資訊設備資安防護建議：(1)持續更新作業系統及辦公室文書處理軟體等安全性修補程式。若所使用的作業系統已不再提供更新程式，建議升級至較新版本作業系統。(2)系統上所有帳號需設定強健的密碼，非必要使用的帳號請將其刪除或停用。系統上非必要的服務程式亦建議移除或關閉。(3)安裝及啟用防毒軟體防護，並持續更新病毒碼及掃毒引擎。(4)安裝及啟用防火牆防護，並設定防火牆規則僅開放所需之通訊埠。(5)不要開啟可疑的郵件與檔案，在開啟下載資料之前先進行資安防護掃描檢查。"
+        },
+
+		{
+            "type": "relationship",
+			"spec_version": "2.1",
+            "id": "relationship--019d336e-8954-40e1-ae7c-d30ff0300b39",
+            "created": "2021-09-14T08:56:34.934895Z",
+            "modified": "2021-09-14T08:56:34.934895Z",
+            "relationship_type": "authored-by",
+            "source_ref": "malware--0c7b5b88-8ff7-4a4d-aa9d-feb398cd0061",
+            "target_ref": "threat-actor--9a8a0d25-7636-429b-a99e-b2a73cd0f11f"
+        },
+		{
+            "type": "relationship",
+			"spec_version": "2.1",
+            "id": "relationship--ed1da198-4d84-4f69-8cc3-70c5555f2222",
+            "created": "2021-09-14T08:56:34.934895Z",
+            "modified": "2021-09-14T08:56:34.934895Z",
+            "relationship_type": "uses",
+            "source_ref": "threat-actor--9a8a0d25-7636-429b-a99e-b2a73cd0f11f",
+            "target_ref": "attack-pattern--2e34237d-8574-43f6-aace-ae2915de8597"
+        },
+ 		{
+            "type": "relationship",
+			"spec_version": "2.1",
+            "id": "relationship--ed1da198-4d84-4f69-8cc3-70c5555f2223",
+            "created": "2021-09-14T08:56:34.934895Z",
+            "modified": "2021-09-14T08:56:34.934895Z",
+            "relationship_type": "delivers",
+            "source_ref": "attack-pattern--2e34237d-8574-43f6-aace-ae2915de8597",
+            "target_ref": "malware--0c7b5b88-8ff7-4a4d-aa9d-feb398cd0061"
+        },
+		{
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--864af2ea-46f9-4d23-b3a2-1c2adf81c265",
+            "created": "2021-09-14T08:56:34.934895Z",
+            "modified": "2021-09-14T08:56:34.934895Z",
+            "relationship_type": "indicates",
+            "source_ref": "indicator--33fe3b22-0201-47cf-85d0-97c02164528d",
+            "target_ref": "malware--0c7b5b88-8ff7-4a4d-aa9d-feb398cd0061"
+        },
+		{
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--864af2ea-46f9-4d23-b3a2-1c2adf81c266",
+            "created": "2021-09-14T08:56:34.934895Z",
+            "modified": "2021-09-14T08:56:34.934895Z",
+            "relationship_type": "indicates",
+            "source_ref": "indicator--64907175-5b2a-49d9-a8ce-39625a463a60",
+            "target_ref": "malware--0c7b5b88-8ff7-4a4d-aa9d-feb398cd0061"
+        }
+	
+    ]
+}

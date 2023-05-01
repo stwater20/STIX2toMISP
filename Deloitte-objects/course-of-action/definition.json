@@ -1,0 +1,45 @@
+{
+    "description": "DLRA",
+    "meta-category": "sectoolstw",
+    "name": "course-of-action",
+    "uuid": "c4a39355-adff-4ec4-a4eb-58106911d903",
+    "version": 1,
+    "attributes": {
+        "id": {
+            "description": "id",
+            "disable_correlation": true,
+            "misp-attribute": "text",
+            "ui-priority": 0
+        },
+        "spec_version": {
+            "description": "spec_version",
+            "disable_correlation": false,
+            "misp-attribute": "text",
+            "ui-priority": 0
+        },
+        "name": {
+            "description": "name",
+            "disable_correlation": false,
+            "misp-attribute": "text",
+            "ui-priority": 0
+        },
+        "description": {
+            "description": "description",
+            "disable_correlation": false,
+            "misp-attribute": "text",
+            "ui-priority": 0
+        },
+        "created": {
+            "description": "created",
+            "disable_correlation": false,
+            "misp-attribute": "datetime",
+            "ui-priority": 0
+        },
+        "modified": {
+            "description": "modified",
+            "disable_correlation": false,
+            "misp-attribute": "datetime",
+            "ui-priority": 0
+        }
+    }
+}

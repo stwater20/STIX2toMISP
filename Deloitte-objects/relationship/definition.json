@@ -1,0 +1,63 @@
+{
+    "description": "DLRA",
+    "meta-category": "sectoolstw",
+    "name": "relationship",
+    "uuid": "c128eca7-a30b-424e-840b-e304286475b6",
+    "version": 1,
+    "attributes": {
+        "id": {
+            "description": "id",
+            "disable_correlation": true,
+            "misp-attribute": "text",
+            "ui-priority": 0
+        },
+        "spec_version": {
+            "description": "spec_version",
+            "disable_correlation": false,
+            "misp-attribute": "text",
+            "ui-priority": 0
+        },
+        "name": {
+            "description": "name",
+            "disable_correlation": false,
+            "misp-attribute": "text",
+            "ui-priority": 0
+        },
+        "description": {
+            "description": "description",
+            "disable_correlation": false,
+            "misp-attribute": "text",
+            "ui-priority": 0
+        },
+        "created": {
+            "description": "created",
+            "disable_correlation": false,
+            "misp-attribute": "datetime",
+            "ui-priority": 0
+        },
+        "modified": {
+            "description": "modified",
+            "disable_correlation": false,
+            "misp-attribute": "datetime",
+            "ui-priority": 0
+        },
+        "relationship_type": {
+            "description": "type",
+            "disable_correlation": false,
+            "misp-attribute": "text",
+            "ui-priority": 0
+        },
+        "source_ref": {
+            "description": "source_ref",
+            "disable_correlation": false,
+            "misp-attribute": "text",
+            "ui-priority": 0
+        },
+        "target_ref": {
+            "description": "target_ref",
+            "disable_correlation": false,
+            "misp-attribute": "text",
+            "ui-priority": 0
+        }
+    }
+}

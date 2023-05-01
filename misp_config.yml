@@ -1,0 +1,4 @@
+MISP:
+    URL: https://misp-docker.eastus.cloudapp.azure.com/
+    KEY: 8p0XDV1BG4QMSrgqZQEQJDIKmpzhTjjDRZOp5dl0
+    VERIFYCERT: False
